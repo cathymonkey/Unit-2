@@ -11,11 +11,11 @@ Your task is to create a computer program for Player B.
 ### Codes:
 ```.py
 import random
+#generate random number for player A
 player_A_number = random.randrange(1,100,1)
-print("The number of player A is {}".format(player_A_number))
 
 
-
+#letting player B to guess and return High or Low or Correct number based on the number player B input
 while True:
     player_B_guess_number = int(input("Player B, please input 1 integer between 1~100 to see if"
                                       "it is player A's secret number:"))
@@ -27,7 +27,7 @@ while True:
         print("Low")
 
     if player_B_guess_number == player_A_number:
-        print("That is the number")
+        print("That is the number that player A guessed")
         break
 
 ````
