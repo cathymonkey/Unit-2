@@ -11,7 +11,7 @@ Your task is to create a computer program for Player B.
 ### Codes:
 
 -AI program that will guess the number for Player B:
-
+(Version 1)
 ```.py
 import random
 #guess the first number of player A
@@ -43,6 +43,39 @@ while True:
 
 ```
 
+(Version2):
+```.py
+
+import random
+
+guess_number_of_player_B = random.randrange(1,100,1)
+print("Is your your number {}, player A?".format(guess_number_of_player_B))
+
+
+
+while True:
+
+    player_A_reply = input("Please type 'Low', 'High', or 'That is the number' to tell me if I "
+                           "guessed the right number or so that I could keep guessing your number: ")
+
+    random_num_1 = random.randrange(10,20,1)
+    random_num_2 = random.randrange(1,9,1)
+    random_num_3 = random.randrange(1,4,1)
+    random_num_4 = random.randrange(0,1,1)
+
+    if player_A_reply == "Low":
+        guess_number_of_player_B += random_num_1 + random_num_2 + random_num_3 + random_num_4
+        print("Is this your number {}, player A?".format(guess_number_of_player_B))
+
+    if player_A_reply == "High":
+        guess_number_of_player_B -= random_num_1 - random_num_2 - random_num_3 -random_num_4
+        print("Is this your number {}, player A?".format(guess_number_of_player_B))
+
+    if player_A_reply == "That is the number":
+        print("Yay! I guessed the right number:)")
+        break
+
+```
 
 
 -Optional (Player A):
