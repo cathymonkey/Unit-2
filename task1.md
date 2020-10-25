@@ -9,6 +9,43 @@ Player A can only reply to a guess from the other player B with “low”, “hi
 Your task is to create a computer program for Player B. 
 
 ### Codes:
+
+-AI program that will guess the number for Player B:
+
+```.py
+import random
+#guess the first number of player A
+guess_number_of_player_B = random.randrange(1,100,1)
+print("Is your your number {}, player A?".format(guess_number_of_player_B))
+
+
+
+while True:
+
+    player_A_reply = input("Please type 'Low', 'High', or 'That is the number' to tell me if I "
+                           "guessed the right number or so that I could keep guessing your number: ")
+    #generate 3 random variable to guess in a more lucky way.
+    random_num_1 = random.randrange(10,20,1)
+    random_num_2 = random.randrange(1,9,1)
+    random_num_3 = random.randrange(1,4,1)
+    #increase and decrease the guess number randomly to bring a more accurate guess
+    if player_A_reply == "Low":
+        guess_number_of_player_B += random_num_1 + random_num_2 + random_num_3
+        print("Is this your number {}, player A?".format(guess_number_of_player_B))
+
+    if player_A_reply == "High":
+        guess_number_of_player_B -= random_num_1 - random_num_2 - random_num_3
+        print("Is this your number {}, player A?".format(guess_number_of_player_B))
+
+    if player_A_reply == "That is the number":
+        print("Yay! I guessed the right number:)")
+        break
+
+```
+
+
+
+-Optional (Player A):
 ```.py
 import random
 #generate random number for player A
