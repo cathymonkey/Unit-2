@@ -1,4 +1,4 @@
-###Task 3:
+### Task 3:
 
 Situation: 
 In a game of guessing a number between 1-100 for two players, player A and player B. 
@@ -8,8 +8,8 @@ Player A can only reply to a guess from the other player B with “low”, “hi
 
 Your task is to create a computer program for Player B. 
 
-##Codes:
-````
+## Codes:
+```.py
 import random
 player_A_number = random.randrange(1,100,1)
 print("The number of player A is {}".format(player_A_number))
