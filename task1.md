@@ -234,6 +234,36 @@ if player_A_reply == "That is the number":
 
 ```
 
+(Version 4/BEST VERSION):
+```.py
+
+low = 1
+high = 100
+guess_number = int((low + high)/2)
+
+while True:
+
+    print("Is this your number {}, player A?".format(guess_number))
+    player_A_reply = input("Please type 'Low' if the number I guessed is lower than your number, 'High' if the number I guessed is higher than your number, or 'That is the number' to tell me if I "
+                           "guessed the right number or so that I could keep guessing your number: ")
+
+    #High means the guess_number is higher than the correct number
+
+    if player_A_reply == "High":
+        high = guess_number
+        guess_number = int((low + high)/2)
+
+    if player_A_reply == "Low":
+        low = guess_number
+        guess_number = int((low + high)/2)
+
+
+    elif player_A_reply == "That is the number":
+        print("Yay! I guessed the right number:)")
+        break
+
+
+```
 
 -Optional (Player A):
 ```.py
