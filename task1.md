@@ -77,6 +77,163 @@ while True:
 
 ```
 
+(Version 3):
+
+```.py
+
+import random
+
+guess_number_of_player_B = 50
+print("Is your your number {}, player A?".format(guess_number_of_player_B))
+
+player_A_reply = input("Please type 'Low', 'High', or 'That is the number' to tell me if I "
+                           "guessed the right number or so that I could keep guessing your number: ")
+
+
+random87_high = random.randrange(75,87,1)
+random87_low = random.randrange(87, 100, 1)
+random63_high = random.randrange(50, 63, 1)
+random63_low = random.randrange(63, 87,1)
+random37_high = random.randrange(25, 37,1 )
+random37_low = random.randrange(37, 50, 1)
+random13_high = random.randrange(1, 13, 1)
+random13_low = random.randrange(13,25,1)
+
+if player_A_reply == "Low":
+    print("Is your number 75?")
+    player_A_reply = input("Please type 'Low', 'High', or 'That is the number' to tell me if I "
+                           "guessed the right number or so that I could keep guessing your number: ")
+    if player_A_reply == "Low":
+        print("Is your number 87?")
+        while True:
+            player_A_reply = input("Please type 'Low', 'High', or 'That is the number' to tell me if I "
+                                   "guessed the right number or so that I could keep guessing your number: ")
+            if player_A_reply == "Low":
+                while True:
+                    random87_low = random.randrange(87, 100, 1)
+                    print("Is this your number {}, player A?".format(random87_low))
+                    player_A_reply = input("Please type 'Low', 'High', or 'That is the number' to tell me if I "
+                                           "guessed the right number or so that I could keep guessing your number: ")
+                    if player_A_reply == "That is the number":
+                        print("Yay! I guessed the right number:)")
+                        break
+
+            if player_A_reply == "High":
+                while True:
+                    random87_high = random.randrange(75,87,1)
+                    print("Is this your number {}, player A?".format(random87_high))
+                    player_A_reply = input("Please type 'Low', 'High', or 'That is the number' to tell me if I "
+                                           "guessed the right number or so that I could keep guessing your number: ")
+                    if player_A_reply == "That is the number":
+                        print("Yay! I guessed the right number:)")
+                        break
+
+            if player_A_reply == "That is the number":
+                print("Yay! I guessed the right number:)")
+                break
+
+    elif player_A_reply == "High":
+        print("Is your number 63?")
+        while True:
+            player_A_reply = input("Please type 'Low', 'High', or 'That is the number' to tell me if I "
+                                   "guessed the right number or so that I could keep guessing your number: ")
+            if player_A_reply == "Low":
+                while True:
+                    random63_low = random.randrange(63, 87,1)
+                    print("Is this your number {}, player A?".format(random63_low))
+                    player_A_reply = input("Please type 'Low', 'High', or 'That is the number' to tell me if I "
+                                           "guessed the right number or so that I could keep guessing your number: ")
+                    if player_A_reply == "That is the number":
+                        print("Yay! I guessed the right number:)")
+                        break
+
+            if player_A_reply == "High":
+                while True:
+                    random63_high = random.randrange(50, 63, 1)
+                    print("Is this your number {}, player A?".format(random63_high))
+                    player_A_reply = input("Please type 'Low', 'High', or 'That is the number' to tell me if I "
+                                           "guessed the right number or so that I could keep guessing your number: ")
+                    if player_A_reply == "That is the number":
+                        print("Yay! I guessed the right number:)")
+                        break
+
+            if player_A_reply == "That is the number":
+                print("Yay! I guessed the right number:)")
+                break
+
+    elif player_A_reply == "That is the number":
+        print("Yay! I guessed the right number:)")
+
+elif player_A_reply == "High":
+    print("Is your number 25?")
+    player_A_reply = input("Please type 'Low', 'High', or 'That is the number' to tell me if I "
+                           "guessed the right number or so that I could keep guessing your number: ")
+    if player_A_reply == "Low":
+        print("Is your number 37?")
+        while True:
+            player_A_reply = input("Please type 'Low', 'High', or 'That is the number' to tell me if I "
+                                   "guessed the right number or so that I could keep guessing your number: ")
+            if player_A_reply == "Low":
+                while True:
+                    random37_low = random.randrange(37, 50, 1)
+                    print("Is this your number {}, player A?".format(random37_low))
+                    player_A_reply = input("Please type 'Low', 'High', or 'That is the number' to tell me if I "
+                                           "guessed the right number or so that I could keep guessing your number: ")
+                    if player_A_reply == "That is the number":
+                        print("Yay! I guessed the right number:)")
+                        break
+
+            if player_A_reply == "High":
+                while True:
+                    random37_high = random.randrange(25, 37,1 )
+                    print("Is this your number {}, player A?".format(random37_high))
+                    player_A_reply = input("Please type 'Low', 'High', or 'That is the number' to tell me if I "
+                                           "guessed the right number or so that I could keep guessing your number: ")
+                    if player_A_reply == "That is the number":
+                        print("Yay! I guessed the right number:)")
+                        break
+
+            if player_A_reply == "That is the number":
+                print("Yay! I guessed the right number:)")
+                break
+    elif player_A_reply == "High":
+        print("Is your number 13?")
+        while True:
+            player_A_reply = input("Please type 'Low', 'High', or 'That is the number' to tell me if I "
+                                   "guessed the right number or so that I could keep guessing your number: ")
+            if player_A_reply == "Low":
+                while True:
+                    random13_low = random.randrange(13,25,1)
+                    print("Is this your number {}, player A?".format(random13_low))
+                    player_A_reply = input("Please type 'Low', 'High', or 'That is the number' to tell me if I "
+                                           "guessed the right number or so that I could keep guessing your number: ")
+                    if player_A_reply == "That is the number":
+                        print("Yay! I guessed the right number:)")
+                        break
+
+            if player_A_reply == "High":
+                while True:
+                    random13_high = random.randrange(1, 13, 1)
+                    print("Is this your number {}, player A?".format(random13_high))
+                    player_A_reply = input("Please type 'Low', 'High', or 'That is the number' to tell me if I "
+                                           "guessed the right number or so that I could keep guessing your number: ")
+                    if player_A_reply == "That is the number":
+                        print("Yay! I guessed the right number:)")
+                        break
+
+            if player_A_reply == "That is the number":
+                print("Yay! I guessed the right number:)")
+                break
+
+    elif player_A_reply == "That is the number":
+        print("Yay! I guessed the right number:)")
+
+if player_A_reply == "That is the number":
+    print("Yay! I guessed the right number:)")
+
+
+```
+
 
 -Optional (Player A):
 ```.py
