@@ -15,6 +15,9 @@
 
 (Image 3: Truth tables of our program)
 
+![](https://github.com/BrightChanges/Unit-2/blob/main/IMG_3808.JPG)
+(Image 4: K-maps of our program)
+
 
 #### Codes
 
