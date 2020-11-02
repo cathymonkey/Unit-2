@@ -11,6 +11,9 @@
 (Image 2: Flow diagram of how the action of pushing buttons will turn on the light)
 
 #### Truth tables/ K-maps
+![](https://github.com/BrightChanges/Unit-2/blob/main/IMG_3807.jpg)
+
+(Image 3: Truth tables of our program)
 
 
 #### Codes
