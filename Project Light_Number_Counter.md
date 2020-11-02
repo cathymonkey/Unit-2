@@ -7,6 +7,7 @@
 
 #### Flow Diagram
 ![](https://github.com/BrightChanges/Unit-2/blob/main/Project%20Light_Number_Counter_Kien%20and%20Timur.png)
+
 (Image 2: Flow diagram of how the action of pushing buttons will turn on the light)
 
 #### Truth tables/ K-maps
