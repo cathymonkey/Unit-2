@@ -100,6 +100,20 @@ void loop()
 ```
 
 #### Real-life program
-Link to the desmontration video: https://github.com/BrightChanges/Unit-2/blob/main/IMG_3819.MOV
+Link to the desmontration video (without the wood hand): https://github.com/BrightChanges/Unit-2/blob/main/IMG_3819.MOV
+
+Picture of our program (with wood hand):
+
+![](https://github.com/BrightChanges/Unit-2/blob/main/IMG_3857.JPG)
+Fig.6 Front side picture of our program
+
+
+![](https://github.com/BrightChanges/Unit-2/blob/main/IMG_3858.JPG)
+Fig.7 Back side picture of our program
+
+
+##### Link to desmonstration video (with wood hand) in the light: https://github.com/BrightChanges/Unit-2/blob/main/IMG_3855.MOV
+
+##### Link to desmonstration video (with wood hand) in the dark: https://github.com/BrightChanges/Unit-2/blob/main/New_CS.mov
 
 
