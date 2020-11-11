@@ -10,7 +10,7 @@ Fig.1 Our sketch for how the buttons will turn on the lights and values associat
 Fig.2 System digram of our program
 
 #### Flow Diagram
-![](https://github.com/BrightChanges/Unit-2/blob/main/Project%20Light_Number_Counter_Kien%20and%20Timur.png)
+![](https://github.com/BrightChanges/Unit-2/blob/main/Project%20Light_Number_Counter_Kien%20and%20Timur%20(1).png)
 
 Fig.3 Flow diagram of how the action of pushing buttons will turn on the light
 
