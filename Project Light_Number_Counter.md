@@ -3,21 +3,6 @@
 
 ## Criteria A: Planning
 
-## Criteria B: Design
-| Test                                                                                          | Expected Outcome                                                                                                                                                                                                                   | Met?          |
-|-----------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
-| Criteria 1: See if our product count number 0-9.                                              | If you pressed the button's combination for a number,  the display shows a pattern for that number  (customers can do this while looking at our  "Button Operation Table") Ex: 0-> Light A turns on,  1-> Light A and B turn on... |               |
-| Criteria 2: See if we provided you with a table showing LED  sequences for each number 0-9    | You are able to see a table showing patterns of LEDs for each number 0-9 that is  presented.                                                                                                                                       |               |
-| Criteria 3: See if we provided you with a table showing buttons sequences for each number 0-9 | You are able to see a table showing patterns of buttons for each number 0-9 that is presented.                                                                                                                                     |               |
-| Criteria 4: Check if our product uses maximum of 7 LEDs and 4 buttons.                        | You will see that our product uses no more than 7 LEDs  and 4 buttons.                                                                                                                                                             |               |
-| Criteria 5: See if our product contains a wood-body.                                          | You will see that our product's body is created from wood.                                                                                                                                                                         |               |
-#### Success Criteria
-1. The display should count from 0-9.
-2. A table showing each number 0-9 and the corresponding LEDs is included.
-3. A table showing the operation of the buttons and number 0-9 is included.
-4. The display was maximum 7 LEDs and 4 buttons.
-5. The main body of the project is made out of wood with the help of laser cutter.
-
 #### Sketches of Ideas
 ![](https://github.com/BrightChanges/Unit-2/blob/main/IMG_3803.JPG)
 Fig.1 Our sketch for how the buttons will turn on the lights and values associate with the lights
@@ -38,6 +23,22 @@ Fig.4 Truth tables of our program
 
 ![](https://github.com/BrightChanges/Unit-2/blob/main/IMG_3808.JPG)
 Fig.5 K-maps of our program
+
+## Criteria B: Design
+| Test                                                                                          | Expected Outcome                                                                                                                                                                                                                   | Met?          |
+|-----------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
+| Criteria 1: See if our product count number 0-9.                                              | If you pressed the button's combination for a number,  the display shows a pattern for that number  (customers can do this while looking at our  "Button Operation Table") Ex: 0-> Light A turns on,  1-> Light A and B turn on... |               |
+| Criteria 2: See if we provided you with a table showing LED  sequences for each number 0-9    | You are able to see a table showing patterns of LEDs for each number 0-9 that is  presented.                                                                                                                                       |               |
+| Criteria 3: See if we provided you with a table showing buttons sequences for each number 0-9 | You are able to see a table showing patterns of buttons for each number 0-9 that is presented.                                                                                                                                     |               |
+| Criteria 4: Check if our product uses maximum of 7 LEDs and 4 buttons.                        | You will see that our product uses no more than 7 LEDs  and 4 buttons.                                                                                                                                                             |               |
+| Criteria 5: See if our product contains a wood-body.                                          | You will see that our product's body is created from wood.                                                                                                                                                                         |               |
+#### Success Criteria
+1. The display should count from 0-9.
+2. A table showing each number 0-9 and the corresponding LEDs is included.
+3. A table showing the operation of the buttons and number 0-9 is included.
+4. The display was maximum 7 LEDs and 4 buttons.
+5. The main body of the project is made out of wood with the help of laser cutter.
+
 
 
 ## Criteria C: Development
