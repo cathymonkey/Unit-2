@@ -118,6 +118,8 @@ Fig.6 Front side picture of our program
 ![](https://github.com/BrightChanges/Unit-2/blob/main/IMG_3858.JPG)
 Fig.7 Back side picture of our program
 
+![](https://github.com/BrightChanges/Unit-2/blob/main/Number_counter%20(1).png)
+Fig.8 Instruction table showing customer how the LEDs are shown and which buttons to press to show them.
 
 ##### Link to desmonstration video (with wood hand) in the light: https://github.com/BrightChanges/Unit-2/blob/main/IMG_3855.MOV
 
