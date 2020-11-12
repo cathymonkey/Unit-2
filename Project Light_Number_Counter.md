@@ -3,7 +3,7 @@
 
 #### Success Criteria
 1. The display should count from 0-9.
-2. The format of the number 0-9 is included.
+2. A table showing each number 0-9 and the corresponding LEDs is included.
 3. Information indicating what the buttons do is included.
 4. The display was maximum 7 LEDs and 4 buttons.
 5. The main body of the project is made out of wood with the help of laser cutter.
