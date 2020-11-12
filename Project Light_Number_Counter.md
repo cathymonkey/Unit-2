@@ -1,6 +1,13 @@
 ## Project Light_Number_Counter
 ### Created by Kien Le Trung and Timur Garifullin
 
+#### Success Criteria
+1. The display should count from 0-9.
+2. The format of the number 0-9 is included.
+3. Information indicating what the buttons do is included.
+4. The display was maximum 7 LEDs and 4 buttons.
+5. The main body of the project is made out of wood with the help of laser cutter.
+
 #### Sketches of Ideas
 ![](https://github.com/BrightChanges/Unit-2/blob/main/IMG_3803.JPG)
 Fig.1 Our sketch for how the buttons will turn on the lights and values associate with the lights
