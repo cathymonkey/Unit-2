@@ -2,6 +2,8 @@
 ### Created by Kien Le Trung and Timur Garifullin
 
 ## Criteria A: Planning
+### Context of the product
+We are creating a product that can counts number from 0 to 9. It will shows different combinations of LEDs when customers click different combinations of buttons. Our product's body will be created from wood.
 
 #### Sketches of Ideas
 ![](https://github.com/BrightChanges/Unit-2/blob/main/IMG_3803.JPG)
