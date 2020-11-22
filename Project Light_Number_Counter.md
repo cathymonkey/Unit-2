@@ -21,7 +21,7 @@ Fig.2.2 The sketchy ystem digram of our program
 
 
 #### Flow Diagram
-![](https://github.com/BrightChanges/Unit-2/blob/main/Project%20Light_Number_Counter_Kien%20and%20Timur%20(1).png)
+![](https://github.com/BrightChanges/Unit-2/blob/main/Project%20Light_Number_Counter_Kien%20and%20Timur%20(2).png)
 
 Fig.3 Flow diagram of how the action of pushing buttons will turn on the light
 
