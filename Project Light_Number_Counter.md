@@ -30,6 +30,9 @@ Fig.5 K-maps of our program
 
 
 ## Criteria C: Development
+1st development story:
+-First, we, Timur and I, tried to codes right after we finished drawing the product's sketches, flow diagram, truth table. However, we realized that we will need to write 9 if statements for the codes to work. So we then draw the K-maps to generate our product's system's boolean logic. We were then able to use the boolean logic to write our codes with 6 boolean statements. (not significantly less but lesser codes are alway better :) Our codes are shown below:
+
 #### Codes
 
 ```.py
@@ -105,6 +108,11 @@ void loop()
 
 
 ```
+2st development story: After finishing writing the codes, we started to assemble our product based on the model we created on Tinkercard (the image of it is shown below). During the process, we met difficulties in connecting the LEDs with the resistors because we didn't use soldering devices. However, we were able to overcome this by bending the LEDs and resistors' knees and stick them with tape. Our assembled or final product is shown in Criteria D below.
+
+![](https://github.com/BrightChanges/Unit-2/blob/main/Screen%20Shot%200002-11-22%20at%202.42.43%20PM.png)
+Fig.6 Our product's model on Tinkercad
+
 ## Criteria D: Functionality
 #### Real-life program
 Link to the desmontration video (without the wood hand): https://github.com/BrightChanges/Unit-2/blob/main/IMG_3819.MOV
@@ -112,14 +120,14 @@ Link to the desmontration video (without the wood hand): https://github.com/Brig
 Picture of our program (with wood hand):
 
 ![](https://github.com/BrightChanges/Unit-2/blob/main/IMG_3857.JPG)
-Fig.6 Front side picture of our program
+Fig.7 Front side picture of our program
 
 
 ![](https://github.com/BrightChanges/Unit-2/blob/main/IMG_3858.JPG)
-Fig.7 Back side picture of our program
+Fig.8 Back side picture of our program
 
 ![](https://github.com/BrightChanges/Unit-2/blob/main/Number_counter%20(1).png)
-Fig.8 Instruction table showing customer how the LEDs are shown and which buttons to press to show them.
+Fig.9 Instruction table showing customer how the LEDs are shown and which buttons to press to show them.
 
 ##### Link to desmonstration video (with wood hand) in the light: https://github.com/BrightChanges/Unit-2/blob/main/IMG_3855.MOV
 
