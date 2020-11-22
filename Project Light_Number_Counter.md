@@ -41,9 +41,7 @@ Fig.5 K-maps of our program
 #### Codes
 
 ```.py
-
-unsigned long last_time;
-
+//All the int ... codes below register the port (the ports on Arduino) of each button and light 
 int button_x_port = 4; 
 int button_y_port = 5; 
 int button_z_port = 6; 
@@ -61,6 +59,7 @@ int button_y_value = 0;
 int button_z_value = 0; 
 int button_w_value = 0;
 
+//The codes below set up the OUTPUT of our devices, which are the 6 lights (a,b,c,d,e,f)
 void setup()
 {
   pinMode(light_a, OUTPUT);
@@ -72,14 +71,16 @@ void setup()
   Serial.begin(9600);
 }
 
+//The codes in the void loop () contains the boolean logic behind different combinations of buttons and lights/LEDs.
 void loop()
 {
-  
+  //The codes below read the INPUT from the 4 buttons
   button_x_value = digitalRead(button_x_port);
   button_y_value = digitalRead(button_y_port);
   button_z_value = digitalRead(button_z_port);
   button_w_value = digitalRead(button_w_port);
-  
+ 
+ //The codes below show the boolean logic of each light (a,b,c,d,e,f)
  //a
  int eq_a = ((!button_y_value)&&(!button_z_value)&&(!button_w_value))||((button_x_value)&&(!button_y_value)&&(!button_z_value))||((!button_x_value)&&(button_y_value)&&(button_z_value));
   digitalWrite(light_a,eq_a);
@@ -100,6 +101,7 @@ void loop()
  int eq_e = (!button_x_value)&&(button_y_value)&&(!button_z_value)||(button_x_value)&&(!button_y_value)&&(!button_z_value)&&(button_w_value);
  digitalWrite(light_e,eq_e); 
  
+ //The Serial.print codes are used for checking if our codes are working
  //f                    
  int eq_f = (!button_x_value)&&(button_y_value)&&(!button_z_value)&&(button_w_value);
  digitalWrite(light_f,eq_f);  
