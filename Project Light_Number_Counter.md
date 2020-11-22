@@ -12,8 +12,13 @@ Fig.1 Our sketch for how the buttons will turn on the lights and values associat
 
 ## Criteria B: Design
 #### System Diagram
+
+![](https://github.com/BrightChanges/Unit-2/blob/main/System%20diagram%20Hand%20project.png)
+Fig.2.1 The neat and clean system diagram of our program
+
 ![](https://github.com/BrightChanges/Unit-2/blob/main/IMG_3827.JPG)
-Fig.2 System digram of our program
+Fig.2.2 The sketchy ystem digram of our program
+
 
 #### Flow Diagram
 ![](https://github.com/BrightChanges/Unit-2/blob/main/Project%20Light_Number_Counter_Kien%20and%20Timur%20(1).png)
