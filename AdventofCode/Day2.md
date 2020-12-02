@@ -2,7 +2,7 @@
 ## Day 1:
 Codes:
 
--Part 1:
+-Part 1 + Part 2:
 ```.py
 
 with open("adventcode_2.txt", "r") as f:
@@ -29,10 +29,6 @@ print(validate(data))
 
 
 ```
-### My solution is 625.
+### My solution for Part 1 is 625.
 
-Part 2:
-```.py
-
-
-```
+### My solution for Part 2 is 391
