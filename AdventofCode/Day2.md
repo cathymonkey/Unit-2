@@ -5,27 +5,37 @@ Codes:
 -Part 1 + Part 2:
 ```.py
 
-with open("adventcode_2.txt", "r") as f:
-    data = [line.strip().split(": ") for line in f.readlines()]
-    for i in range(len(data)):
-        data[i][0] = data[i][0].split(" ")
-        data[i][0][0] = data[i][0][0].split("-")
+file_input = 'adventcode_2.txt'
+counter_1  = 0 #Part 1
+counter_2  = 0 #Part 2
 
-def count_character(char,string):
-    count = 0
-    for i in string:
-        if i == char:
-            count+=1
-    return count
+with open(file_input, 'r') as file:
+    for i in file:
+        input           = i.split(': ')
+        password        = input[-1]
 
-def validate(passwords):
-    valid = []
-    for i in passwords:
-        if count_character(i[0][1],i[1]) in range(int(i[0][0][0]),int(i[0][0][1])+1):
-            valid.append(i[1])
-    return len(valid)
+        validator_txt   = input[0].split(' ')
 
-print(validate(data))
+        occurence_range = validator_txt[0].split('-')
+
+        letter          = validator_txt[-1]
+
+
+        password_count  = password.count(letter)
+
+
+        #Part 1
+        if password_count >= int(occurence_range[0]) and password_count <= int(occurence_range[1]):
+            counter_1 += 1
+
+        #Part 2
+        password_pos = [password[int(occurence_range[0])-1], password[int(occurence_range[1])-1]]
+        if password_pos.count(letter) == 1:
+            counter_2 += 1
+
+
+    print('Part 1: ', counter_1)
+    print('Part 2: ', counter_2)
 
 
 ```
