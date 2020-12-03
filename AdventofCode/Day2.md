@@ -1,5 +1,5 @@
 # AdventofCode 2020 
-## Day 1:
+## Day 2:
 Codes:
 
 -Part 1 + Part 2:
