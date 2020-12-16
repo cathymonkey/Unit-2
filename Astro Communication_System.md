@@ -7,21 +7,27 @@
 We are creating a communication system that could send and receive messages between Earth and arguably any planet. In our case, we are designing our system for austronauts on the moon. The system lets austronaut push buttons to send their messages in English. The system will then convert this into Morse code to show these message through a LED light. Morse-English translating system created by other developers could then be used to read the messages the austronat sent from our system.
 
 
-##### Sketch of the idea of our system:
+#### Sketches of Ideas
 ![](https://github.com/BrightChanges/Unit-2/blob/main/IMG_1067.JPG)
-
-##### Success Criteria
-| Criteria:                                                                                                      | Expected outcome                                                                                                   | Met? |
-|----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|------|
-| Criteria 1: The user should be able to input  alphabetic characters and numbers(0-9).                          | You are able to input alphabetic characters  and numbers(0-9) into the system.                                     |      |
-| Criteria 2: It should output the user's message  on the LCD and through with light(Using Morse code)           | You are able to see how your message is  outputed on the LCD and the light is blinking  according to a Morse code. |      |
-| Criteria 3: It should let the user use the  following commands: send message, delete,  space, repeat, confirm. | You are able to use the following commands:  send message, delete, space, repeat, confirm.                         |      |
-| Criteria 4: It should provide an instruction set.                                                              | You are able to see how to use our system with  different button combinations.                                     |      |
-| Criteria 5: It should let the user type at least 10 words in 1 minute                                          | You are able to type at least 10 words in 1 minute.                                                                |      |
-| Criteria 6: It should contain at most  2 buttons and 1 LED.                                                    | You are able to see that our system contains at most 2 buttons and 1 button.                                       |      |
+Fig.1 Our sketch for how our system looks like
 
 
-Codes (so far):
+## Criteria B: Design
+#### System Diagram
+Image...
+Fig.2 The neat and clean system diagram of our program
+
+#### Flow Diagram
+Image...
+Fig.3 Flow diagram of our complete system
+
+
+
+## Criteria C: Development
+1st development story:....
+
+#### Codes (so far):
+
 ```.py
 
 // include the library code:
@@ -315,3 +321,33 @@ if(mode == 1){
 }
 
 ```
+2st development story:....
+
+Image...
+Fig.3 Our system model on TinkerCad
+
+## Criteria D: Functionality
+#### Real-life program
+Link to the desmontration video:....
+Picture of our program:
+
+Image...
+Fig.4
+
+Image...
+Fig.5
+
+
+## Criteria E: Evaluation
+
+##### Success Criteria
+| Criteria:                                                                                                      | Expected outcome                                                                                                   | Met? |
+|----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|------|
+| Criteria 1: The user should be able to input  alphabetic characters and numbers(0-9).                          | You are able to input alphabetic characters  and numbers(0-9) into the system.                                     |      |
+| Criteria 2: It should output the user's message  on the LCD and through with light(Using Morse code)           | You are able to see how your message is  outputed on the LCD and the light is blinking  according to a Morse code. |      |
+| Criteria 3: It should let the user use the  following commands: send message, delete,  space, repeat, confirm. | You are able to use the following commands:  send message, delete, space, repeat, confirm.                         |      |
+| Criteria 4: It should provide an instruction set.                                                              | You are able to see how to use our system with  different button combinations.                                     |      |
+| Criteria 5: It should let the user type at least 10 words in 1 minute                                          | You are able to type at least 10 words in 1 minute.                                                                |      |
+| Criteria 6: It should contain at most  2 buttons and 1 LED.                                                    | You are able to see that our system contains at most 2 buttons and 1 button.                                       |      |
+
+
