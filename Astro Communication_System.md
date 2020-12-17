@@ -351,8 +351,23 @@ void send(){
     if(msg[i]=='A'){
     	dot();
         dash();
-      	dash();
-    } 
+    }
+    if(msg[i]=='B'){
+    	dash();
+      
+    
+    }
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
   }
 }
