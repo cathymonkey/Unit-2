@@ -20,7 +20,7 @@ Fig.2 The system diagram of our program
 #### Flow Diagram
 ![](https://github.com/BrightChanges/Unit-2/blob/main/Astro%20Commun%20Syst%20Flow%20chart.png)
 Fig.3 Flow diagram of our complete system
-
+(Link to our Flow Diagram online: https://app.lucidchart.com/lucidchart/invitations/accept/c567ebac-a171-4df8-b23b-e091a7f7a6d5)
 
 
 ## Criteria C: Development
