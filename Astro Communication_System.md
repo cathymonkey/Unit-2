@@ -15,10 +15,10 @@ Fig.1 Our sketch for how our system looks like
 ## Criteria B: Design
 #### System Diagram
 Image...
-Fig.2 The neat and clean system diagram of our program
+Fig.2 The system diagram of our program
 
 #### Flow Diagram
-Image...
+![](https://github.com/BrightChanges/Unit-2/blob/main/Astro%20Commun%20Syst%20Flow%20chart.png)
 Fig.3 Flow diagram of our complete system
 
 
@@ -323,7 +323,7 @@ if(mode == 1){
 ```
 2st development story:....
 
-Image...
+![](https://github.com/BrightChanges/Unit-2/blob/main/Astro_arrays.png)
 Fig.3 Our system model on TinkerCad
 
 ## Criteria D: Functionality
