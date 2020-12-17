@@ -14,7 +14,7 @@ Fig.1 Our sketch for how our system looks like
 
 ## Criteria B: Design
 #### System Diagram
-Image...
+![](https://github.com/BrightChanges/Unit-2/blob/main/IMG_7291.JPG)
 Fig.2 The system diagram of our program
 
 #### Flow Diagram
