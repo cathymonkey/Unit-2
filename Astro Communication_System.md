@@ -52,7 +52,7 @@ int number_showing = 0;
 int ButB_status2 = 0;
 int reset = 0;
 int command_showing = 0;
-int mode = 1; //0 - mode 1, 1 - mode 2
+int mode = 0; //0 - mode 1, 1 - mode 2
 //
 
 
@@ -98,7 +98,20 @@ void setup() {
 }
 
 void loop(){
-
+  lcd.clear();
+	
+  Serial.print("mode: ");
+  Serial.print(mode);
+  Serial.print(" Button B mode: ");
+  Serial.print(ButB_status);
+  Serial.print(" Reset: ");
+  Serial.print(reset);
+  Serial.print(" row changed: ");
+  Serial.print(row_changed);
+  Serial.print(" msg: ");
+  Serial.println(msg);  
+  
+  
   lcd.setCursor(0,1);
   lcd.write(arrow[0]);  
   lcd.setCursor(1,1);
@@ -108,10 +121,20 @@ void loop(){
   lcd.setCursor(4,1);
   lcd.print(":");
  
+  
+  if(digitalRead(6) == HIGH){
+   
+    Serial.print("button A, B are pressed。 Mode ");
+    Serial.println(mode);
+    mode +=1;
+    if(mode == 2){
+      mode = 0;
+    } 
+  } 
 
   
  //Normally scrolling through the alphabet
- if(ButB_status == 0){
+ if(ButB_status == 0 && mode == 0){
     //Selector scrolling
    	lcd.setCursor(0,0);
     lcd.print(letters[letter_showing]);
@@ -128,7 +151,6 @@ void loop(){
   //First press of the button
   //Go to letter "O"
   if(ButB_status == 1){
-    Serial.println("ButB_Status = 1");  
     
     //Selector scrolling
     lcd.setCursor(0,0);
@@ -189,50 +211,67 @@ void loop(){
     }
 
 
-    //time between each character
-    delay(1000);
- 
-   lcd.clear();
- 
-  
-    //show the current message
-    lcd.setCursor(5,1);
-    Serial.println(msg);
-    lcd.print(msg);
-   
 
 // Codes for BUTTON B IN MODE 2 
   // Changing the commands per click of Button B in mode 2
  if(mode == 1){
    if(ButB_status2 == 0 && reset == 1){
-      lcd.clear();
       reset = 0;
   	  command_showing = 0; 
-      Serial.println("command_showing = _ ");
-      Serial.println(command_showing); 
+      //Serial.println("command_showing = _ ");
+      //Serial.println(command_showing); 
       lcd.setCursor(3,1);
       lcd.print(commands[command_showing]); //show space function
   }
 }   
- Serial.println(ButB_status2); 
+  if(ButB_status2 == 0){
+      //Serial.println("command_showing = _");
+      //Serial.println(command_showing); 
+      lcd.setCursor(3,1);
+      lcd.print(commands[command_showing]); //show delete function
+  } 
+  if(ButB_status2 == 1){
+      //Serial.println("command_showing = D");
+      //Serial.println(command_showing); 
+      lcd.setCursor(3,1);
+      lcd.print(commands[command_showing]); //show delete function
+  }                        
+  if(ButB_status2 == 2){ 
+      //Serial.println("command_showing = S");
+      //Serial.println(command_showing);
+      lcd.setCursor(3,1);
+      lcd.print(commands[command_showing]); //show send function
+    }
+  if(ButB_status2 == 3){
+      command_showing = 0;
+      ButB_status2 = 0;
+      reset++;
+      //Serial.println("reset");
+      //Serial.println(command_showing);
+	}
+
+	//show the current message
+    lcd.setCursor(5,1);
+    lcd.print(msg);
+  //time between each character
+    delay(500);
+
 }
-
-
 //Functions:
 
 void buttonA(){
   
   if(mode == 0){
-   Serial.println("ButtonA in mode 1 was pressed");
+   //Serial.println("ButtonA in mode 1 was pressed");
   
     if(ButB_status == 2){
     	 msg += numbers[number_showing-1];
    } 
    else{
     msg += letters[letter_showing-1];
- 	lcd.setCursor(5,1);
-  	Serial.println(msg);
-  	lcd.print(msg);
+ 	//lcd.setCursor(5,1);
+  	//Serial.println(msg);
+  	//lcd.print(msg);
     }
   }  
   
@@ -241,11 +280,14 @@ if(mode == 1){
   Serial.println("ButtonA in mode 2 was pressed");
   Serial.println(command_showing);
   
+  //Functions SPACE, DELETE, SEND
   if(command_showing == 0){
+      Serial.println("Space");     
       msg += " ";
       lcd.print(msg);
     }
   if(command_showing == 1){
+     Serial.println("Delete");
       msg.remove(msg.length()-1);
       lcd.print(msg);
     }
@@ -253,7 +295,8 @@ if(mode == 1){
    if(command_showing == 2){
       Serial.println("Sending");
       msg = " ";
-      lcd.print(msg); 
+      lcd.print(msg);
+     send();
     }
 }
   
@@ -262,64 +305,57 @@ void buttonB(){
   
   
 //Mode 1  
-if(mode == 0){
+	if(mode == 0){
    //Change the row.
-    ButB_status ++;
-    row_changed ++;
+    	ButB_status ++;
+    	row_changed ++;
   
 
-  if(ButB_status == 1){
-    letter_showing = 14; 
-   }
-  if(ButB_status == 2){
-    number_showing = 0;
-  }
-     
-     
-  if(ButB_status == 3){
-      letter_showing = 0;
-      ButB_status = 0;
+  	if(ButB_status == 1){
+    	letter_showing = 14; 
+   	}
+  	if(ButB_status == 2){
+    	number_showing = 0;
+  	}
+         
+  	if(ButB_status == 3){
+      	letter_showing = 0;
+      	ButB_status = 0;
     }
+      
+    
 } 
   
   
 //Mode 2    
 if(mode == 1){
   ButB_status2++;
+  command_showing++;
   //check if the mode is 2
   Serial.println(" Mode 2 ");
   Serial.print("ButB_status2 = ");  
   Serial.println(ButB_status2);  
     
-  if(ButB_status2 == 1){
-      lcd.clear();
-      command_showing++; 
-      Serial.println("command_showing = D");
-      Serial.println(command_showing); 
-      lcd.setCursor(3,1);
-      lcd.print(commands[command_showing]); //show delete function
-  }                        
-  if(ButB_status2 == 2){ 
-      lcd.clear();
-      command_showing++;
-      Serial.println("command_showing = S");
-      Serial.println(command_showing);
-      lcd.setCursor(3,1);
-      lcd.print(commands[command_showing]); //show send function
-    }
-  if(ButB_status2 == 3){
-      lcd.clear();
-      command_showing = 0;
-      ButB_status2 = 0;
-      reset++;
-      Serial.println("reset");
-      Serial.println(command_showing);
-	}
+
   }
-  
+}
+  void buttonAB(){
+    
+
   
 }
 
+void send(){
+	Serial.println("sending");
+  for(int i=0; i<msg.length();i++){
+    if(msg[i]=='A'){
+    	dot();
+        dash();
+      	dash();
+    } 
+    
+  }
+}
 ```
 2st development story:....
 
