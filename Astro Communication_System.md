@@ -9,7 +9,7 @@ We are creating a communication system that could send and receive messages betw
 
 #### Sketches of Ideas
 ![](https://github.com/BrightChanges/Unit-2/blob/main/IMG_7520.JPG)
-Fig.1 Our sketch for how our system looks like
+Fig.1 Our sketch for how our system looks like/Instruction table
 
 
 ## Criteria B: Design
