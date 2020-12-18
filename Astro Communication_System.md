@@ -390,6 +390,9 @@ Fig.4
 Image...
 Fig.5
 
+![](https://github.com/BrightChanges/Unit-2/blob/main/New%20Project%20(71).png)
+Fig.6 Intruction set for our system
+
 
 ## Criteria E: Evaluation
 
