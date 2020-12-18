@@ -32,6 +32,8 @@ Fig.3 Flow diagram of our complete system
 
 ```.py
 
+
+
 // include the library code:
 #include <LiquidCrystal.h>
 
@@ -41,6 +43,8 @@ const int but_B = 3;
 
 int ButB_status = 0;
 int row_changed = 0;
+
+int lightbulb = 7;
 
 String letters[] = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
 String numbers[] = {"0","1","2","3","4","5","6","7","8","9"};
@@ -86,6 +90,8 @@ void setup() {
   lcd.print("Welcome");
   delay(1000);
   lcd.clear();
+  
+  pinMode(lightbulb, OUTPUT); 
 
   //Setup interruptions
   attachInterrupt(0,buttonA, RISING); //Pin 2
@@ -97,6 +103,7 @@ void setup() {
   //For mode 2
   lcd.setCursor(3,1); //ButB_status2 = 0
   lcd.print("_"); // show space function
+  
 }
 
 void loop(){
@@ -208,7 +215,7 @@ void loop(){
 // Button B Mode 1
     //Make a delay if the row changed
     if(row_changed == 1){
-        delay(2000);
+        delay(1000);
         row_changed = 0;
     }
 
@@ -256,7 +263,7 @@ void loop(){
     lcd.setCursor(5,1);
     lcd.print(msg);
   //time between each character
-    delay(500);
+    delay(800);
 
 }
 //Functions:
@@ -286,19 +293,20 @@ if(mode == 1){
   if(command_showing == 0){
       Serial.println("Space");     
       msg += " ";
-      lcd.print(msg);
+     
     }
   if(command_showing == 1){
      Serial.println("Delete");
       msg.remove(msg.length()-1);
-      lcd.print(msg);
+      
     }
    
    if(command_showing == 2){
-      Serial.println("Sending");
-      msg = " ";
-      lcd.print(msg);
-     send();
+      lcd.clear();
+      lcd.setCursor(5,1);
+      lcd.print("Sending");
+      delay(1000);      
+      send();
     }
 }
   
@@ -341,35 +349,275 @@ if(mode == 1){
 
   }
 }
-  void buttonAB(){
+
     
 
-  
+
+//English to morse
+void dash(){
+  Serial.println("dash function");
+  digitalWrite(lightbulb,HIGH);
+  delay(3000);
+  digitalWrite(lightbulb,LOW);
+  delay(1000);
+}
+
+void dot(){
+  Serial.println("dot function");
+  digitalWrite(lightbulb,HIGH);
+  delay(1000);
+  digitalWrite(lightbulb,LOW);
+  delay(1000);
 }
 
 void send(){
-	Serial.println("sending");
+  Serial.println("sending");
+  Serial.print("Message = ");
+  Serial.println(msg);
   for(int i=0; i<msg.length();i++){
-    if(msg[i]=='A'){
+    Serial.println(msg[i]);
+    if(msg[i]=='a'){
+       Serial.println("Morse A");
     	dot();
         dash();
     }
-    if(msg[i]=='B'){
+    if(msg[i]=='b'){
+      Serial.println("Morse B");
     	dash();
-      
-    
+      	dot();
+      	dot();
+      	dot();
     }
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    if(msg[i]=='c'){
+      Serial.println("Morse C");
+    	dash();
+        dot();
+        dash();
+        dot();
+    }
+    if(msg[i]=='d'){
+      Serial.println("Morse D");
+    	dash();
+      	dot();
+      	dot();
+    }
+    if(msg[i]=='e'){
+      Serial.println("Morse E");
+      	dot();
+    }
+    if(msg[i]=='f'){
+      Serial.println("Morse F");
+      	dot();
+      	dot();
+      	dash();
+      	dot();
+    }
+    if(msg[i]=='g'){
+      Serial.println("Morse G");
+      	dash();
+      	dash();
+      	dot();
+    }
+    if(msg[i]=='h'){
+      Serial.println("Morse H");
+      	dot();
+      	dot();
+      	dot();
+      	dot();
+    }
+    if(msg[i]=='i'){
+      Serial.println("Morse I");
+      	dot();
+      	dot();
+    }
+    if(msg[i]=='j'){
+      Serial.println("Morse J");
+      dot();
+      dash();
+      dash();
+      dash(); 
+    }
+    if(msg[i]=='k'){
+      Serial.println("Morse K");
+      dash();
+      dot();
+      dash();
+    }
+    if(msg[i]=='l'){
+      Serial.println("Morse L");
+      dot();
+      dash();
+      dot();
+      dot();
+      
+    }
+    if(msg[i]=='m'){
+      Serial.println("Morse M");
+      dash();
+      dash();
+    }
+    if(msg[i]=='n'){
+      Serial.println("Morse N");
+      dash();
+      dot();
+    }
+    if(msg[i]=='o'){
+      Serial.println("Morse O");
+      dash();
+      dash();
+      dash();
+    }
+    if(msg[i]=='p'){
+      Serial.println("Morse P");
+      dot();
+      dash();
+      dash();
+      dot();
+    }
+    if(msg[i]=='q'){
+      Serial.println("Morse Q");
+      dash();
+      dash();
+      dot();
+      dash();
+    }
+    if(msg[i]=='r'){
+      Serial.println("Morse R");
+      dot();
+      dash();
+      dot();
+    }
+    if(msg[i]=='s'){
+      Serial.println("Morse S");
+      dot();
+      dot();
+      dot();
+    }
+    if(msg[i]=='t'){
+      Serial.println("Morse T");
+      dash();
+    }
+    if(msg[i]=='u'){
+      Serial.println("Morse U");
+      dot();
+      dot();
+      dash();
+    }
+    if(msg[i]=='v'){
+      Serial.println("Morse V");
+      dot();
+      dot();
+      dot();
+      dash();
+    }
+    if(msg[i]=='w'){
+      Serial.println("Morse W");
+      dot();
+      dash();
+      dash();
+    }
+    if(msg[i]=='x'){
+      Serial.println("Morse X");
+      dash();
+      dot();
+      dot();
+      dash();
+    }
+    if(msg[i]=='y'){
+      Serial.println("Morse Y");
+      dash();
+      dot();
+      dash();
+      dash();
+    }
+    if(msg[i]=='z'){
+      Serial.println("Morse Z");
+      dash();
+      dash();
+      dot();
+      dot();
+    }
+    if(msg[i]=='1'){
+      Serial.println("Morse 1");
+      dot();
+      dash();
+      dash();
+      dash();
+      dash();
+    }
+    if(msg[i]=='2'){
+      Serial.println("Morse 2");
+      dot();
+      dot();
+      dash();
+      dash();
+      dash();
+    }
+    if(msg[i]=='3'){
+      Serial.println("Morse 3");
+      dot();
+      dot();
+      dot();
+      dash();
+      dash();
+    }
+    if(msg[i]=='4'){
+      Serial.println("Morse 4");
+      dot();
+      dot();
+      dot();
+      dot();
+      dash();
+    }
+    if(msg[i]=='5'){
+      Serial.println("Morse 5");
+      dot();
+      dot();
+      dot();
+      dot();
+      dot();
+    }
+    if(msg[i]=='6'){
+      Serial.println("Morse 6");
+      dash();
+      dot();
+      dot();
+      dot();
+      dot();
+    }
+    if(msg[i]=='7'){
+      Serial.println("Morse 7");
+      dash();
+      dash();
+      dot();
+      dot();
+      dot();
+    }
+    if(msg[i]=='8'){
+      Serial.println("Morse 8");
+      dash();
+      dash();
+      dash();
+      dot();
+      dot();
+    }
+    if(msg[i]=='9'){
+      Serial.println("Morse 9");
+      dash();
+      dash();
+      dash();
+      dash();
+      dot();
+    }	
+    if(msg[i]=='0'){
+      Serial.println("Morse 0");
+      dash();
+      dash();
+      dash();
+      dash();
+      dash();
+    }   
+    delay(6000);
     
   }
 }
@@ -381,17 +629,16 @@ Fig.3 Our system model on TinkerCad
 
 ## Criteria D: Functionality
 #### Real-life program
-Link to the desmontration video:....
-Picture of our program:
+Link to the desmontration video:
+Video 1: https://www.youtube.com/watch?v=J7-qxpr3GQE
+Video 2: https://www.youtube.com/watch?v=p6FbCQ4yoOI&ab_channel=KienLeTrung
 
-Image...
-Fig.4
 
-Image...
-Fig.5
+![](https://github.com/BrightChanges/Unit-2/blob/main/IMG_5498.JPG)
+Fig.4 Picture of our system
 
 ![](https://github.com/BrightChanges/Unit-2/blob/main/New%20Project%20(71).png)
-Fig.6 Intruction set for our system
+Fig.5 Intruction set for our system
 
 
 ## Criteria E: Evaluation
