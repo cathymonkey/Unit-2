@@ -629,7 +629,7 @@ Fig.3 Our system model on TinkerCad
 
 ## Criteria D: Functionality
 #### Real-life program
-Link to the desmontration video:
+Link to the desmontration video (with us going through Alpha test for our success criterias):
 Video 1: https://www.youtube.com/watch?v=J7-qxpr3GQE
 Video 2: https://www.youtube.com/watch?v=p6FbCQ4yoOI&ab_channel=KienLeTrung
 
