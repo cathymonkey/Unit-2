@@ -211,7 +211,7 @@ void loop(){
     letter_showing = 14; 
    }
 
-  
+ 
 // Button B Mode 1
     //Make a delay if the row changed
     if(row_changed == 1){
